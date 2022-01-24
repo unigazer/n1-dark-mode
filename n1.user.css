@@ -35,6 +35,14 @@
       background-color: rgba(17, 17, 17, .5) !important;
       backdrop-filter: blur(8px);
     }
+
+    .single .header-title.sticky-header {
+      background-image: none;
+    }
+
+    .header-bottom .header-nav {
+      box-shadow: none;
+    }
   
     .header-bottom {
       background-color: transparent;
