@@ -3,20 +3,22 @@
 @name           N1 Dark Mode
 @namespace      github.com/unigazer/n1-dark-mode
 @homepageURL    https://github.com/unigazer/n1-dark-mode
-@version        1.0.3
+@version        1.0.4
 @description    Noćni režim za "N1" portal
 @author         Vladimir Jovanović
 ==/UserStyle== 
 */
-:root {
-  --brand-color: #2c358c;
-  --primary: #111;
-  --secondary: #1c1c1c;
-  --border-color: #2d2d2d;
-  --text-color: #bfbfbf;
-}
 
 @-moz-document domain("n1info.com") {
+
+  :root {
+    --brand-color: #2c358c;
+    --primary: #111;
+    --secondary: #1c1c1c;
+    --border-color: #2d2d2d;
+    --text-color: #bfbfbf;
+  }
+
   @media (prefers-color-scheme: dark) {
     /* General */
     article {
