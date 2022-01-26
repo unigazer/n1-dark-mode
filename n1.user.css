@@ -3,12 +3,11 @@
 @name           N1 Dark Mode
 @namespace      github.com/unigazer/n1-dark-mode
 @homepageURL    https://github.com/unigazer/n1-dark-mode
-@version        1.0.2
+@version        1.0.3
 @description    Noćni režim za "N1" portal
 @author         Vladimir Jovanović
 ==/UserStyle== 
 */
-
 :root {
   --brand-color: #2c358c;
   --primary: #111;
@@ -33,7 +32,7 @@
     .single-post .in-post-related-news .is-list {
       background: var(--secondary);
     }
-  
+
     header {
       background-color: rgba(17, 17, 17, .5) !important;
       backdrop-filter: blur(8px);
@@ -46,7 +45,7 @@
     .header-bottom .header-nav {
       box-shadow: none;
     }
-  
+
     .header-bottom {
       background-color: transparent;
     }
@@ -55,12 +54,12 @@
     article {
       background-color: var(--primary) !important;
     }
-  
+
     blockquote {
       background-color: var(--primary);
       background-image: none;
     }
-  
+
     /* Shoppster logo, chevron */
     #menu-item-8674444 > a:nth-child(1) > i:nth-child(1) > svg:nth-child(1) > g:nth-child(3) > g:nth-child(1) > path:nth-child(1),
     #menu-item-8674444 > a:nth-child(1) > i:nth-child(1) > svg:nth-child(1) > g:nth-child(3) > g:nth-child(1) > path:nth-child(2),
@@ -73,10 +72,12 @@
     #menu-item-8674444 > a:nth-child(1) > i:nth-child(1) > svg:nth-child(1) > g:nth-child(3) > g:nth-child(1) > path:nth-child(9),
     .header-title a .Arrow_Right svg,
     .lang-switcher__menu > li.menu-item:first-child > a .sprite-icon svg,
-    .n1 .header .menu__desktop-right .menu-item--program > a .sprite-icon svg {
+    .n1 .header .menu__desktop-right .menu-item--program > a .sprite-icon svg,
+    .n1 .navigation-right .searchbox .searchbox-icon .Search-Active {
       fill: #fff;
     }
-  
+
+    h1, h2, h3, h4, h5, p, span, strong,
     .header-bottom .header-nav .navigation .dropdown.menu.menu--desktop li.menu-item a,
     .lang-switcher__menu > li.menu-item:first-child > a,
     .promoted .promoted-post__title-link,
@@ -88,6 +89,7 @@
     article .mobile .uc-block-post-grid-cat_name .uc-block-post-grid-cat_name_link,
     article .uc-block-post-grid-header .uc-block-post-grid-byline .uc-block-post-grid-cat_name_link,
     article .uc-block-post-grid-header .uc-block-post-grid-byline a,
+    .page-template-footer-pages .footer-pages .entry-title,
     .header-title a,
     .header-title h3,
     .footer-top section h2,
@@ -166,13 +168,19 @@
       background-color: var(--primary);
     }
 
-    .inner-btn .inner-load-more .btn {
+    .lang-switcher__menu > li.menu-item a,
+    .inner-btn .inner-load-more .btn,
+    .header .searchbox.searchbox-open .searchbox-input {
       color: var(--text-color);
     }
 
     .n1 .header .menu__desktop-right .menu-item--program a {
       color: var(--text-color) !important;
       cursor: pointer;
+    }
+
+    .header .searchbox.searchbox-open {
+      background-color: var(--secondary);
     }
 
     /* Dropdown */
@@ -192,11 +200,33 @@
       fill: var(--text-color);
     }
 
+    /* Cookies */
+    #CybotCookiebotDialog {
+      background-color: rgba(17, 17, 17, .5) !important;
+      backdrop-filter: blur(8px);
+    }
+    #CybotCookiebotDialog #CybotCookiebotDialogBody #CybotCookiebotDialogBodyContent #CybotCookiebotDialogBodyContentTitle,
+    #CybotCookiebotDialog #CybotCookiebotDialogBody #CybotCookiebotDialogBodyContent #CybotCookiebotDialogBodyContentText,
+    #CybotCookiebotDialog #CybotCookiebotDialogBody #CybotCookiebotDialogBodyButtons #CybotCookiebotDialogBodyButtonDetails {
+      color: var(--text-color) !important;
+    }
+
+    /* Search Page */
+    body.search {
+      background: var(--secondary);
+    }
+
+    .search-content .searchbox [type="text"] {
+      color: var(--text-color);
+    }
+
+    .search-content .searchbox .Search {
+      fill: #fff;
+    }
   }
-  
+
   .top-zone,
   .banner-promotion {
     display: none;
   }
-
 }
