@@ -60,7 +60,8 @@
       background-color: var(--primary) !important;
     }
 
-    blockquote {
+    blockquote,
+    .antrfile {
       background-color: var(--primary);
       background-image: none;
     }
