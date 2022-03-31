@@ -6,7 +6,7 @@
 @supportURL     https://github.com/unigazer/n1-dark-mode/issues
 @updateURL      https://github.com/unigazer/n1-dark-mode/raw/main/n1.user.css
 @license        CC-BY-4.0
-@version        1.0.5
+@version        1.0.6
 @description    Noćni režim za "N1" portal
 @author         Vladimir Jovanović
 ==/UserStyle== 
@@ -114,7 +114,11 @@
     .single-post .main-content footer span.tags-title,
     .single .main-head .post-author a,
     .single-post .main-head .post-author a,
-    .promoted .promoted-post__cat-link {
+    .promoted .promoted-post__cat-link,
+    #live-blog-wrapper .uc-liveblog-main-content .uc-liveblog-main-title,
+    #live-blog-wrapper .uc-liveblog-content .uc-liveblog-entry p,
+    #live-blog-wrapper .uc-liveblog-content .uc-liveblog-title,
+    #live-blog-wrapper .uc-liveblog-content .uc-liveblog-entry {
       color: var(--text-color);
     }
 
