@@ -1,16 +1,16 @@
-/*
-==UserStyle==
-@name           N1 Dark Mode
-@namespace      N1 Dark Mode
-@homepageURL    https://github.com/unigazer/n1-dark-mode
-@supportURL     https://github.com/unigazer/n1-dark-mode/issues
-@updateURL      https://github.com/unigazer/n1-dark-mode/raw/main/n1.user.css
-@license        CC-BY-4.0
-@version        1.0.7
-@description    Noćni režim za "N1" portal
-@author         Vladimir Jovanović
-==/UserStyle== 
-*/
+/* ==UserStyle==
+@name         N1 Dark Mode
+@description  N1 Dark Mode
+@namespace    https://github.com/unigazer
+@author       Vladimir Jovanovic <me@vladio.me> (https://vladio.me)
+@homepageURL  https://github.com/unigazer/n1-dark-mode
+@supportURL   https://github.com/unigazer/n1-dark-mode/issues
+@updateURL    https://github.com/unigazer/n1-dark-mode/raw/main/n1.user.css
+@license      CC-BY-4.0
+@version      1.0.8
+@preprocessor stylus
+@var checkbox toogleAds "Enable ads" 0
+==/UserStyle== */
 
 @-moz-document domain("n1info.com") {
 
@@ -20,6 +20,12 @@
     --secondary: #1c1c1c;
     --border-color: #2d2d2d;
     --text-color: #bfbfbf;
+  }
+	
+  if (toogleAds) {
+    iframe[src="https://widget.halooglasi.com/nekretnine.html"] {
+      display: none;
+    }
   }
 
   @media (prefers-color-scheme: dark) {
@@ -65,16 +71,25 @@
       background-color: var(--primary);
       background-image: none;
     }
+		
+		/* Number of comments on the article */
+		.single-post .main-head .post-comments-no,
+		.single .main-head .post-comments-no,
+		.coral-tabBarComments .coral-tabBarComments-allComments .coral-counter .Counter-text-qB7K9,
+		.coral-tabBarComments .coral-tabBarComments-allComments .coral-counter .Counter-text-qB7K9:before,
+		.coral-tabBarComments .coral-tabBarComments-allComments .coral-counter .Counter-text-qB7K9:after {
+			color: #6a8dff;
+		}
 
     /* Article title */
-		.featured-zone-homepage > section > div > div > div.left > div.uc-block0 > div.cell.big > article > div.uc-block-post-grid-text > header {
-			padding: 1rem;
-		}
+    .featured-zone-homepage > section > div > div > div.left > div.uc-block0 > div.cell.big > article > div.uc-block-post-grid-text > header {
+      padding: 1rem;
+    }
 
-		.featured-zone-homepage > section > div > div > div.left > div.uc-block0 > div.cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > div.uc-block-post-grid-text > header,
-		.cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > div.uc-block-post-grid-text {
-			padding: .5rem;
-		}
+    .featured-zone-homepage > section > div > div > div.left > div.uc-block0 > div.cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > div.uc-block-post-grid-text > header,
+    .cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > div.uc-block-post-grid-text {
+      padding: .5rem;
+    }
 
     /* Shoppster logo, chevron */
     #menu-item-8674444 > a:nth-child(1) > i:nth-child(1) > svg:nth-child(1) > g:nth-child(3) > g:nth-child(1) > path:nth-child(1),
