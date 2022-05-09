@@ -6,7 +6,7 @@
 @supportURL     https://github.com/unigazer/n1-dark-mode/issues
 @updateURL      https://github.com/unigazer/n1-dark-mode/raw/main/n1.user.css
 @license        CC-BY-4.0
-@version        1.0.6
+@version        1.0.7
 @description    Noćni režim za "N1" portal
 @author         Vladimir Jovanović
 ==/UserStyle== 
@@ -65,6 +65,16 @@
       background-color: var(--primary);
       background-image: none;
     }
+
+    /* Article title */
+		.featured-zone-homepage > section > div > div > div.left > div.uc-block0 > div.cell.big > article > div.uc-block-post-grid-text > header {
+			padding: 1rem;
+		}
+
+		.featured-zone-homepage > section > div > div > div.left > div.uc-block0 > div.cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > div.uc-block-post-grid-text > header,
+		.cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > div.uc-block-post-grid-text {
+			padding: .5rem;
+		}
 
     /* Shoppster logo, chevron */
     #menu-item-8674444 > a:nth-child(1) > i:nth-child(1) > svg:nth-child(1) > g:nth-child(3) > g:nth-child(1) > path:nth-child(1),
