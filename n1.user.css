@@ -7,9 +7,9 @@
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @updateURL    https://github.com/unigazer/n1-dark-mode/raw/main/n1.user.css
 @license      CC-BY-4.0
-@version      1.0.9
+@version      1.0.10
 @preprocessor stylus
-@var checkbox	toggleAds "Enable ads" 0
+@var checkbox	toggleAds "Disable ads" 0
 ==/UserStyle== */
 @-moz-document domain("n1info.com") {
 
