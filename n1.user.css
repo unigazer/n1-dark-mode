@@ -9,7 +9,7 @@
 @license      CC-BY-4.0
 @version      1.0.10
 @preprocessor stylus
-@var checkbox	toggleAds "Disable ads" 0
+@var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
 @-moz-document domain("n1info.com") {
 
