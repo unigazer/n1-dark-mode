@@ -1,0 +1,21 @@
+{
+  "name": "n1-dark-mode",
+  "version": "1.0.11",
+  "description": "N1 Dark Mode",
+  "main": "n1.user.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unigazer/n1-dark-mode.git"
+  },
+  "keywords": [
+    "N1",
+    "usercss",
+    "stylus"
+  ],
+  "author": "Vladimir Jovanovic",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/unigazer/n1-dark-mode/issues"
+  },
+  "homepage": "https://github.com/unigazer/n1-dark-mode#readme"
+}
