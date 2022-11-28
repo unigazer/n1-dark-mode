@@ -92,6 +92,15 @@
     .cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > div.uc-block-post-grid-text {
       padding: .5rem;
     }
+    
+    /* Social media icons */
+    .uc-social-bar-wrapper .uc-social-bar .uc-social-bar-icons .uc-icon-wrap .sprite-icon svg {
+      fill: #bfbfbf
+    }
+
+    .uc-social-bar-wrapper .uc-social-bar .uc-social-bar-icons .uc-icon-wrap .sprite-icon svg:hover {
+      fill: #8f8f8f;
+    }
 
     /* Shoppster logo, chevron */
     #menu-item-8674444 > a:nth-child(1) > i:nth-child(1) > svg:nth-child(1) > g:nth-child(3) > g:nth-child(1) > path:nth-child(1),
