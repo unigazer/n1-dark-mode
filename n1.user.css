@@ -162,7 +162,7 @@
     #live-blog-wrapper .uc-liveblog-content .uc-liveblog-entry p,
     #live-blog-wrapper .uc-liveblog-content .uc-liveblog-title,
     #live-blog-wrapper .uc-liveblog-content .uc-liveblog-entry {
-      color: var(--text-color);
+      color: var(--text-color) !important;
     }
 
     .footer-inner {
