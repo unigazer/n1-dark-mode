@@ -7,7 +7,7 @@
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @updateURL    https://userstyles.world/api/style/2933.user.css
 @license      CC-BY-4.0
-@version      1.0.14
+@version      1.0.15
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
@@ -92,7 +92,7 @@
     .cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > div.uc-block-post-grid-text {
       padding: .5rem;
     }
-    
+
     /* Social media icons */
     .uc-social-bar-wrapper .uc-social-bar .uc-social-bar-icons .uc-icon-wrap .sprite-icon svg {
       fill: #bfbfbf
@@ -167,6 +167,32 @@
 
     .footer-inner {
       background-color: var(--primary);
+    }
+
+    /* Air quality widget */
+    .air-pollution-section .measurement-stations,
+    .air-pollution-section .measurement-stations .search-field-wrap .search-input {
+      background-color: var(--secondary);
+    }
+
+    .air-pollution-section .air-pollution-header .air-pollution-legend a,
+    .air-pollution-section .air-pollution-content .air-pollution-description-wrap .air-pollution-time-update,
+    .air-pollution-section .measurement-stations .search-field-wrap .search-input,
+    {
+      color: var(--text-color);
+    }
+
+    .air-pollution-section .measurement-stations .search-field-wrap .search-input::placeholder {
+      opacity: 1;
+    }
+
+    .air-pollution-section .air-pollution-header .air-pollution-legend a svg {
+      filter: invert(1) brightness(75%);
+    }
+
+    .air-pollution-section .measurement-stations .search-field-wrap,
+    .air-pollution-section .measurement-stations .locations-wrap .municipality {
+      border-bottom: 1px solid var(--border-color);
     }
 
     /* Comments */
@@ -278,9 +304,16 @@
     }
 
     /* Live (Timeline) */
-    .uc-liveblog-content {
+    .uc-badge-live-blog,
+    .uc-liveblog-content,
+    .highlight-section {
       background-color: var(--primary);
       box-shadow: 0px 1px 12px var(--primary) !important;
+    }
+
+    #live-blog-wrapper .uc-liveblog-main-content,
+    #live-blog-wrapper .uc-liveblog-related {
+      border-left: 1px solid var(--border-color);
     }
   }
 
