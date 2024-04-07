@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/unigazer/n1-dark-mode
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @license      CC-BY-4.0
-@version      1.0.17
+@version      1.0.18
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
@@ -320,44 +320,46 @@
 }
 
 @-moz-document url-prefix("https://eu.fastcomments") {
-	.comments .comment {
-		background-color: var(--primary);
-		border: 1px solid var(--border-color);
+  @media (prefers-color-scheme: dark) {
+   	.comments .comment {
+			background-color: var(--primary);
+			border: 1px solid var(--border-color);
 
-		.inner .comment-content .commenter-name {
-			.username {
+			.inner .comment-content .commenter-name {
+				.username {
+					color: var(--text-color) !important;
+				}
+			}
+
+			.inner .comment-content .comment-text {
 				color: var(--text-color) !important;
+			}
+
+			.children .comment {
+				background-color: #1e1e1e;
 			}
 		}
 
-		.inner .comment-content .comment-text {
-			color: var(--text-color) !important;
+		.comment-reply > .comment-input,
+		.comment-reply .auth-input input {
+			background-color: var(--primary);
+			border: 1px solid var(--border-color);
 		}
 
-		.children .comment {
-			background-color: #1e1e1e;
-		}
-	}
-
-	.comment-reply > .comment-input,
-	.comment-reply .auth-input input {
-		background-color: var(--primary);
-		border: 1px solid var(--border-color);
-	}
-
-	.dark button,
-	.dark .comment-reply button {
-		border: 1px solid var(--border-color);
-	}
-
-	.select-dir-wrapper {
-		.comment-count,
-		.select-dir .drop-label {
-			color: var(--text-color) !important;
+		.dark button,
+		.dark .comment-reply button {
+			border: 1px solid var(--border-color);
 		}
 
-		.select-dir .drop-label::after {
-			filter: invert();
-		}
-	}
+		.select-dir-wrapper {
+			.comment-count,
+			.select-dir .drop-label {
+				color: var(--text-color) !important;
+			}
+
+			.select-dir .drop-label::after {
+				filter: invert();
+			}
+		} 
+  }
 }
