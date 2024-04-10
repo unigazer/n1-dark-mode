@@ -6,16 +6,19 @@
 @homepageURL  https://github.com/unigazer/n1-dark-mode
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @license      CC-BY-4.0
-@version      1.0.18
+@version      1.0.19
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
-:root {
-	--brand-color: #2c358c;
-	--primary: #111;
-	--secondary: #1c1c1c;
-	--border-color: #2d2d2d;
-	--text-color: #bfbfbf;
+@-moz-document url-prefix("https://n1info"),
+url-prefix("https://eu.fastcomments") {
+	:root {
+		--brand-color: #2c358c;
+		--primary: #111;
+		--secondary: #1c1c1c;
+		--border-color: #2d2d2d;
+		--text-color: #bfbfbf;
+	}
 }
 
 @-moz-document url-prefix("https://n1info") {
@@ -320,8 +323,8 @@
 }
 
 @-moz-document url-prefix("https://eu.fastcomments") {
-  @media (prefers-color-scheme: dark) {
-   	.comments .comment {
+	@media (prefers-color-scheme: dark) {
+		.comments .comment {
 			background-color: var(--primary);
 			border: 1px solid var(--border-color);
 
@@ -360,6 +363,6 @@
 			.select-dir .drop-label::after {
 				filter: invert();
 			}
-		} 
-  }
+		}
+	}
 }
