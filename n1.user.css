@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/unigazer/n1-dark-mode
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @license      CC-BY-4.0
-@version      1.0.19
+@version      1.0.20
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
@@ -347,6 +347,11 @@ url-prefix("https://eu.fastcomments") {
 		.comment-reply .auth-input input {
 			background-color: var(--primary);
 			border: 1px solid var(--border-color);
+			color: var(--text-color) !important;
+		}
+
+		.comment-reply .comment-reply-top-bar .logged-in-info .username {
+			color: var(--text-color) !important;
 		}
 
 		.dark button,
@@ -363,6 +368,10 @@ url-prefix("https://eu.fastcomments") {
 			.select-dir .drop-label::after {
 				filter: invert();
 			}
+		}
+
+		textarea {
+			color: var(--text-color) !important;
 		}
 	}
 }
