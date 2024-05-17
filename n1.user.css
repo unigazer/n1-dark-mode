@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/unigazer/n1-dark-mode
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @license      CC-BY-4.0
-@version      1.0.20
+@version      1.0.21
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
@@ -24,9 +24,14 @@ url-prefix("https://eu.fastcomments") {
 @-moz-document url-prefix("https://n1info") {
 
 	if (toggleAds) {
-		iframe[src="https://widget.halooglasi.com/nekretnine.html"] {
+		iframe[src="https://widget.halooglasi.com/nekretnine.html"],
+		.smartbanner {
 			display: none;
 		}
+
+		html {
+      margin: 0 !important;
+    }
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -91,7 +96,8 @@ url-prefix("https://eu.fastcomments") {
 		}
 
 		.featured-zone-homepage > section > div > div > .left > .uc-block0 > .cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > .uc-block-post-grid-text > header,
-		.cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > .uc-block-post-grid-text {
+		.cell.list > article.uc-post-grid-item.post.type-post.status-publish.format-standard.hentry > .uc-block-post-grid-text,
+		.uc-block-post-grid-header {
 			padding: .5rem;
 		}
 
