@@ -6,17 +6,18 @@
 @homepageURL  https://github.com/unigazer/n1-dark-mode
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @license      CC-BY-4.0
-@version      1.0.21
+@version      1.0.22
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
 @-moz-document url-prefix("https://n1info"),
+url-prefix("https://comments.n1info"),
 url-prefix("https://eu.fastcomments") {
 	:root {
 		--brand-color: #2c358c;
 		--primary: #111;
 		--secondary: #1c1c1c;
-		--border-color: #2d2d2d;
+		--border-color: #333;
 		--text-color: #bfbfbf;
 	}
 }
@@ -30,8 +31,8 @@ url-prefix("https://eu.fastcomments") {
 		}
 
 		html {
-      margin: 0 !important;
-    }
+			margin: 0 !important;
+		}
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -378,6 +379,31 @@ url-prefix("https://eu.fastcomments") {
 
 		textarea {
 			color: var(--text-color) !important;
+		}
+	}
+}
+
+@-moz-document url-prefix("https://comments.n1info") {
+	[class^="CallOut-root-"],
+	[class^="Box-root-"] {
+		background-color: var(--primary) !important;
+
+		span {
+			color: var(--text-color) !important;
+		}
+	}
+
+	.coral-comment {
+		background-color: var(--primary);
+		border: 1px solid var(--border-color);
+
+		.coral-comment-content,
+		.coral-comment-inReplyToText .coral-comment-inReplyToUsername {
+			color: var(--text-color) !important;
+		}
+
+		.coral-comment-username span {
+			color: #fff !important;
 		}
 	}
 }
