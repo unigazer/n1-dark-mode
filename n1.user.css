@@ -59,6 +59,37 @@ url-prefix("https://eu.fastcomments") {
         background-color: transparent;
         box-shadow: none;
       }
+
+      /* Hamburger menu */
+      #mobile-nav-btn {
+        span {
+          background-color: var(--text-color);
+        }
+      }
+
+      nav#responsive-navigation {
+        min-height: 100dvh;
+        background-color: var(--secondary);
+        border-color: var(--border-color);
+
+        form {
+          background-color: var(--secondary);
+
+          & > div,
+          input {
+            background-color: var(--secondary);
+            border-color: var(--border-color);
+          }
+        }
+
+        li {
+          border-color: var(--border-color);
+        }
+
+        .shadow-mobileMenu {
+          background-color: var(--primary);
+        }
+      }
     }
 
     h1,
@@ -77,7 +108,7 @@ url-prefix("https://eu.fastcomments") {
       color: var(--text-color);
     }
 
-    /* Povezani članak*/
+    /* Povezani članak */
     .featured-block {
       .border-borderSecondary {
         border-color: var(--border-color);
@@ -86,6 +117,16 @@ url-prefix("https://eu.fastcomments") {
         .border-link-article {
           border-radius: 0;
         }
+      }
+
+      article {
+        border-color: var(--border-color);
+      }
+    }
+
+    .small-cards-block {
+      article {
+        border-color: var(--border-color);
       }
     }
 
