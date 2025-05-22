@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/unigazer/n1-dark-mode
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @license      CC-BY-4.0
-@version      2.0.1
+@version      2.0.2
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
@@ -22,7 +22,6 @@ url-prefix("https://eu.fastcomments") {
 }
 
 @-moz-document url-prefix("https://n1info") {
-
   if (toggleAds) {
     #billboard_banner,
     .external_content_block {
@@ -97,7 +96,7 @@ url-prefix("https://eu.fastcomments") {
     h3,
     a,
     p {
-      color: var(--text-color);
+      color: var(--text-color) !important;
     }
 
     .bg-primary {
@@ -158,9 +157,33 @@ url-prefix("https://eu.fastcomments") {
       }
     }
 
-
     .block-header-wrapper {
       border-color: var(--border-color);
+    }
+
+    /* Blockquote */
+    .antrfile-wrapper {
+      background-color: var(--secondary);
+    }
+
+    /* Tagovi */
+    .tags-article-block-wrapper {
+      outline: 1px solid var(--border-color);
+
+      div {
+        &:first-child {
+          color: var(--text-color);
+          background-color: var(--secondary);
+        }
+
+        &:last-child {
+          background-color: var(--primary);
+        }
+
+        a {
+          background-color: var(--secondary);
+        }
+      }
     }
 
     footer {
@@ -217,6 +240,26 @@ url-prefix("https://eu.fastcomments") {
 
       .cta-comment-wrapper {
         background-color: var(--secondary);
+
+        a[data-selector="read-comments-button"] {
+          background-color: var(--primary);
+          border: 0;
+        }
+      }
+
+      div[data-testid="follow-us-bar-wrapper"] {
+        background-color: var(--secondary);
+        border: 0;
+
+        div {
+          &:first-child {
+            color: var(--text-color);
+          }
+        }
+
+        img[alt="X"] {
+          filter: invert();
+        }
       }
     }
   }
