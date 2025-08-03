@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/unigazer/n1-dark-mode
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @license      CC-BY-4.0
-@version      2.0.4
+@version      2.0.5
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
@@ -24,7 +24,8 @@ url-prefix("https://eu.fastcomments") {
 @-moz-document url-prefix("https://n1info") {
   if (toggleAds) {
     #billboard_banner,
-    .external_content_block {
+    .external_content_block,
+    .ad-loading-placeholder {
       display: none;
     }
   }
@@ -139,8 +140,10 @@ url-prefix("https://eu.fastcomments") {
     }
 
     /* Zeleni Kutak */
-    .row-container:nth-child(17) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
-      background-color: rgba(85, 85, 85, 0.9);
+    [content-block-id="branded_grid_block-45"] {
+      .branded-block {
+        background-color: rgba(85, 85, 85, 0.9);
+      }
     }
 
     /* N1 Video */
@@ -201,7 +204,8 @@ url-prefix("https://eu.fastcomments") {
         background-color: #0a1a4d;
       }
 
-      & > div:nth-child(4) {
+      & > div:nth-child(3):not(.hero-section),
+      div:nth-child(4):not(.article-wrapper):not(#category):not(.row-container):not(.uas) {
         background-color: var(--primary);
       }
 
