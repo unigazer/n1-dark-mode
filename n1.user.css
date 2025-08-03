@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/unigazer/n1-dark-mode
 @supportURL   https://github.com/unigazer/n1-dark-mode/issues
 @license      CC-BY-4.0
-@version      2.0.5
+@version      2.0.6
 @preprocessor stylus
 @var checkbox	toggleAds "Disable ads" 1
 ==/UserStyle== */
@@ -205,7 +205,7 @@ url-prefix("https://eu.fastcomments") {
       }
 
       & > div:nth-child(3):not(.hero-section),
-      div:nth-child(4):not(.article-wrapper):not(#category):not(.row-container):not(.uas) {
+      div:nth-child(4):not(.article-wrapper):not(#category):not(.row-container):not(.uas):not(.vjs-text-track-display) {
         background-color: var(--primary);
       }
 
